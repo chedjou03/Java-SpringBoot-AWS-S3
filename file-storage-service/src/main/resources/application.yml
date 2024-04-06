@@ -5,15 +5,16 @@ spring:
       file-size-threshold: 2MB
       max-file-size: 5MB
       max-request-size: 10MB
-
+  config:
+    import: aws-secretsmanager:aws/secret
 server:
   port: 9090
 
 cloud:
   aws:
     credentials:
-      access-key:
-      secret-key: s
+      access-key: cantStoreAccessKeyHere
+      secret-key: CantStoreSecretKeyHere
     region:
       static: us-east-1
     stack:
